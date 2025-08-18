@@ -4,14 +4,16 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DbHelper {
-
+    private static final QueryRunner QUERY_RUNNER = new QueryRunner();
     private DbHelper() {
     }
 
@@ -24,10 +26,10 @@ public class DbHelper {
 
     @SneakyThrows
     public static void cleanTables() {
+        var runner = new QueryRunner();
         var payment = "DELETE FROM payment_entity;";
         var credit = "DELETE FROM credit_request_entity;";
         var order = "DELETE FROM order_entity;";
-        var runner = new QueryRunner();
         try (var connection = getConnection();) {
             runner.update(connection, payment);
             runner.update(connection, credit);

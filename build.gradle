@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-   id 'io.freefair.lombok' version '8.6'
-    id 'io.qameta.allure' version '2.11.2'
+  //  id 'io.freefair.lombok' version '8.6'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 group 'ru.netology'
@@ -12,9 +12,9 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 allure {
-    version "2.20.1"
+    version "2.27.0"
     useJUnit5 {
-        version "2.20.1"
+        version "2.27.0"
     }
 }
 
@@ -27,14 +27,14 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
 
     testImplementation 'com.codeborne:selenide:6.19.1'
-    testImplementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
+    testImplementation 'io.qameta.allure:allure-selenide:2.27.0'
     testImplementation 'mysql:mysql-connector-java:8.0.30'
     testImplementation 'org.postgresql:postgresql:42.5.1'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
-    testCompileOnly 'org.projectlombok:lombok:1.18.30'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
-    testImplementation 'org.slf4j:slf4j-simple:2.0.5'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.17'
 }
 
 test {
@@ -43,4 +43,5 @@ test {
     systemProperty 'db.url', System.getProperty('db.url', 'jdbc:mysql://localhost:3306/app')
     systemProperty 'db.user', System.getProperty('db.user', 'app')
     systemProperty 'db.pass', System.getProperty('db.pass', 'pass')
+    systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
 }
