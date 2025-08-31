@@ -16,7 +16,6 @@ import org.junit.jupiter.api.Test;
 import page.CreditAccordingToTheCardPage;
 import page.HomePage;
 
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 

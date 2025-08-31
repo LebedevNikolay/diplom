@@ -12,7 +12,6 @@ import page.CardPaymentPage;
 import page.HomePage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static org.junit.jupiter.api.Assertions.*;
 
 class DebitCardPaymentTest {
     HomePage mainPage;

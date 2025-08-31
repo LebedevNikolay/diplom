@@ -8,10 +8,8 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.*;
-import static org.graalvm.compiler.nodeinfo.InputType.Condition;
 
 public class CardPaymentPage {
     private final SelenideElement cardNumberField = $("input[placeholder='0000 0000 0000 0000']");
@@ -20,11 +18,11 @@ public class CardPaymentPage {
     private final SelenideElement monthFieldError = $x("//*[text()='Месяц']/..//*[@class='input__sub']");
     private final SelenideElement cardYearField = $("input[placeholder='22']");
     private final SelenideElement yearFieldError = $x("//*[text()='Год']/..//*[@class='input__sub']");
-    private final SelenideElement cardOwnerField = $$(".input__inner").find(Condition.text("Владелец")).$(".input__control");
+    private SelenideElement cardOwnerField = $$(".input__inner").findBy(text("Владелец")).$(".input__control");
     private final SelenideElement ownerFieldError = $x("//*[text()='Владелец']/..//*[@class='input__sub']");
     private final SelenideElement cardCVCField = $("input[placeholder='999']");
     private final SelenideElement cvcFieldError = $x("//*[text()='CVC/CVV']/..//*[@class='input__sub']");
-    private final SelenideElement continueButton = $(".button__content").find(Condition.text("Продолжить"));
+    private final SelenideElement continueButton = $(".button__content").find(String.valueOf(Condition.text("Продолжить")));
 
     private final SelenideElement notificationSuccess = $(".notification_status_ok");
     private final SelenideElement notificationError = $(".notification_status_error");
