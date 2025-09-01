@@ -10,8 +10,8 @@ HELP.md
 build/
 data
 src/main
-idea/
-gradle/
+.idea/
+.gradle/
 
 ### STS ###
 .apt_generated
