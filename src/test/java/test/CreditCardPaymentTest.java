@@ -1,23 +1,13 @@
 package test;
 
-import org.junit.jupiter.api.*;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import data.DataHelper;
 import data.DbHelper;
-
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.*;
 import page.CreditAccordingToTheCardPage;
 import page.HomePage;
-
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 class CreditCardPaymentTest {
     HomePage mainPage;

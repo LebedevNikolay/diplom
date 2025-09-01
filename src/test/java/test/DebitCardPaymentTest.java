@@ -4,14 +4,10 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import data.DataHelper;
 import data.DbHelper;
-
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
-
 import page.CardPaymentPage;
 import page.HomePage;
-
-import static com.codeborne.selenide.Selenide.open;
 
 class DebitCardPaymentTest {
     HomePage mainPage;
