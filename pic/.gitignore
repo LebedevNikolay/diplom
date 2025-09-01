@@ -1,9 +1,7 @@
 Thumbs.db*
 .DS_Store*
 node_modules
-.idea
 target
-*.iml
 
 Thumbs.db*
 .DS_Store
