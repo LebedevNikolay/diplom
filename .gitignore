@@ -1,8 +1,17 @@
 Thumbs.db*
+.DS_Store*
+node_modules
+target
+
+Thumbs.db*
 .DS_Store
 HELP.md
-.gradle/
+.gradle
 build/
+data
+src/main
+idea/
+gradle/
 
 ### STS ###
 .apt_generated
@@ -14,7 +23,7 @@ build/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea/
+.idea
 *.iws
 *.iml
 *.ipr
@@ -41,5 +50,4 @@ out/
 
 ### Exclusions ###
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
 !**/src/test/**
