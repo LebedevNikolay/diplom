@@ -57,7 +57,7 @@
     java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
 ```
 
-7. В новом окне терминала запустить тестирование командой:
+7. В новом окне терминала запустить авто-тестирование командой:
 
 * для MySQL
 
@@ -87,7 +87,9 @@
 
 *по окончании формирования отчет откроется в браузере автоматически
 
+8. После выполнения всех тестов остановить docker контейнер командой в консоли: docker-compose down
 ### Отчетная документация
 
 * [План автоматизации тестирования веб-формы сервиса покупки тура](https://github.com/LebedevNikolay/diplom/blob/main/docs/Plan.md)
+* [Отчёт по итогам тестирования](https://github.com/LebedevNikolay/diplom/blob/main/docs/Report.md)
 * [Отчёт по итогам автоматизации](https://github.com/LebedevNikolay/diplom/blob/main/docs/Summary.md)
